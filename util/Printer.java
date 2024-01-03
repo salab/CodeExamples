@@ -18,13 +18,21 @@ public class Printer {
     }
 
     public void print(Object object) {
+        printHeader();
+
+        printStream.println("class name:\t" + object.getClass().getName());
+        printStream.println("hashCode:\t" + object.hashCode());
+        printStream.println("toString:\t" + object.toString());
+
+        printFooter();
+    }
+
+    private void printHeader() {
         LocalDateTime now = LocalDateTime.now();
         printStream.println("--- printing object start at " + now.toString() + " ---");
-
-        printStream.println("class name: " + object.getClass().getName());
-        printStream.println("hashCode: " + object.hashCode());
-        printStream.println("toString: " + object.toString());
-
+    }
+    
+    private void printFooter() {
         printStream.println("--- printing object end ---");
     }
 }
