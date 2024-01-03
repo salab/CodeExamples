@@ -1,17 +1,15 @@
 public class Attribute1 {
-    private static final String movedAttribute = "moved attribute";
+    private static final String extractedAttribute = "extracted code";
 
-    private static final String renamedAttribute1 = "renamed attribute";
-
-    private static final String inlinedAttribute = "inlined code";
+    private static final String renamedAttribute2 = "renamed attribute";
 
     public static void main(String[] args) {
-        System.err.println("extracted code");
+        System.err.println(extractedAttribute);
 
-        System.err.println(movedAttribute);
+        System.err.println(Attribute2.movedAttribute);
 
-        System.err.println(renamedAttribute1);
+        System.err.println(renamedAttribute2);
 
-        System.err.println(inlinedAttribute);
+        System.err.println("inlined code");
     }
 }
