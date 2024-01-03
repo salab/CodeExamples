@@ -2,10 +2,18 @@ import java.util.List;
 
 public class ExtractMethod {
     public static void main(String[] args) {
-        List.of(args).forEach((arg) -> {
+        printArgsList(List.of(args));
+
+        System.out.println(getArgsLength(args));
+    }
+
+    private static void printArgsList(List<String> argsList) {
+        argsList.forEach((arg) -> {
             System.out.println(arg);
         });
+    }
 
-        System.out.println(args.length);
+    private static int getArgsLength(String[] args) {
+        return args.length;
     }
 }
