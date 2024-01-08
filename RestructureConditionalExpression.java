@@ -1,6 +1,6 @@
 public class RestructureConditionalExpression {
     public void method1(boolean flag) {
-        if (!(!flag)) {
+        if (flag) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
@@ -8,7 +8,7 @@ public class RestructureConditionalExpression {
     }
 
     public void method2(int a) {
-        if (a != 1) {
+        if (!(a == 1)) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
@@ -16,7 +16,7 @@ public class RestructureConditionalExpression {
     }
 
     public void method3(int a) {
-        if (!(-5 <= a && a <= 5)) {
+        if (-5 > a || a > 5) {
             System.out.println("Yes");
         } else {
             System.out.println("No");

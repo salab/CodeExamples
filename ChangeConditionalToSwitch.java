@@ -1,29 +1,36 @@
 public class ChangeConditionalToSwitch {
     public int method1(String id) {
         int value;
-        if (id.equals("a")) {
-            value = 0; 
-        } else if (id.equals("b")) {
-            value = 1; 
-        } else if (id.equals("c")) {
-            value = 2; 
-        } else if (id.equals("d")) {
-            value = 3; 
-        } else {
-            value = 4; 
+        switch (id) {
+            case "a":
+                value = 0;
+                break;        
+            case "b":
+                value = 1;
+                break;        
+            case "c":
+                value = 2;
+                break;        
+            case "d":
+                value = 3;
+                break;        
+            default:
+                value = 4;
+                break;
         }
         return value;
     }
 
     public String method2(int a) {
-        if (a == 0) {
-            return "a";
-        } else if (a == 1) {
-            return "b";
-        } else if (a == 2) {
-            return "c";
-        } else if (a == 3) {
-            return "d";
+        switch (a) {
+            case 0:
+                return "a";
+            case 1:
+                return "b";
+            case 2:
+                return "c";
+            case 3:
+                return "d";
         }
         return "e";
     }
