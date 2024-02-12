@@ -1,5 +1,9 @@
 public class Foo {
     void foo(boolean flag) {
-        System.out.println(flag ? 1 : 0);
+        bar(flag);
+    }
+    private void bar(boolean flag) {
+        int baz = flag ? 1 : 0;
+        System.out.println(baz);
     }
 }
